@@ -82,7 +82,7 @@ import { Money } from '../../shared/ui/money.component';
     .line[data-coverage='bop'] .swatch { background: var(--line-bop); }
     .line[data-coverage='wc'] .swatch { background: var(--line-wc); }
     .line[data-coverage='pl'] .swatch { background: var(--line-pl); }
-    .line[data-kind='credit'] .swatch { background: var(--posted); }
+    .line[data-kind='credit'] .swatch { background: transparent; border: 1.5px solid var(--posted); }
     .line[data-kind='fee'] .swatch, .line[data-kind='total'] .swatch { background: transparent; }
     .line[data-kind='total'] { border-block-start: 2px solid var(--ink); margin-block-start: var(--s-1); padding-block-start: var(--s-3); font-weight: 600; }
     .text { display: grid; gap: 2px; min-inline-size: 0; }
@@ -120,6 +120,6 @@ export class PremiumLedger {
   /** On the first step there is nothing to price yet; the ledger says so, briefly. */
   readonly compact = input(false);
   protected readonly open = signal(false);
-  /** The total is shown as the balance; the list shows the entries that make it. */
-  protected readonly visibleLines = computed(() => this.premium().lines.filter((l) => l.kind !== 'total'));
+  /** Every posted line, closing on the balance like a passbook page. */
+  protected readonly visibleLines = computed(() => this.premium().lines);
 }

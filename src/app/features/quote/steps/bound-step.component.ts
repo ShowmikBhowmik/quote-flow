@@ -38,8 +38,8 @@ import { Money } from '../../../shared/ui/money.component';
         <p class="next">Your first invoice is on the dashboard. Documents would normally arrive by email within a few minutes.</p>
 
         <div class="actions">
-          <a class="btn btn-primary" routerLink="/dashboard/policies">Open the dashboard<app-icon name="arrowRight" [size]="18" /></a>
           <button type="button" class="btn btn-secondary" (click)="startOver()">Start another quote</button>
+          <a class="btn btn-primary" routerLink="/dashboard/policies">Open the dashboard<app-icon name="arrowRight" [size]="18" /></a>
         </div>
       </div>
     }
