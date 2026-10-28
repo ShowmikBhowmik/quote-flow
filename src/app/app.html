@@ -1,0 +1,27 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" routerLink="/quote" aria-label="Quote Flow home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.14" />
+        <path d="M8 9h16M8 15h16M8 21h10" stroke="var(--brass-on-navy)" stroke-width="2.5" stroke-linecap="round" />
+        <circle cx="23" cy="21" r="2.5" fill="currentColor" />
+      </svg>
+      <span class="wordmark">Quote Flow</span>
+      <span class="carrier">by Northlane Mutual</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a routerLink="/quote" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">Get a quote</a>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="main" tabindex="-1">
+  <router-outlet />
+</main>
+<footer class="foot">
+  <div class="foot-inner">
+    <p>Quote Flow is a demonstration. Northlane Mutual is not a real insurer and no number on this site is a real price.</p>
+    <a href="https://github.com/ShowmikBhowmik/quote-flow" rel="noopener">Source on GitHub<app-icon name="external" [size]="14" /></a>
+  </div>
+</footer>
